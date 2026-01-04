@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapicería Profesional | Jesús María</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TAPICERÍA <span>PRO</span></h1>
+            <p>Arte y Confort en Jesús María</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="visualizador">
+            <div class="texto-intro">
+                <h2>Visualizá tu próximo mueble</h2>
+                <p>Hacé clic en las muestras para ver cómo cambia la textura.</p>
+            </div>
+            
+            <div class="contenedor-interactivo">
+                <div class="pantalla-mueble">
+                    <img id="mueble-base" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Sillón Base">
+                    <div id="capa-textura"></div>
+                </div>
+                
+                <div class="selector-telas">
+                    <h3>Muestras Disponibles:</h3>
+                    <div class="botones-grid">
+                        <button class="btn-tela" onclick="cambiarTela('pana-azul')" style="background-color: #2c3e50;">Pana Azul</button>
+                        <button class="btn-tela" onclick="cambiarTela('pana-roja')" style="background-color: #8e44ad;">Pana Violeta</button>
+                        <button class="btn-tela" onclick="cambiarTela('ecocuero')" style="background-color: #2ecc71;">Verde Bosque</button>
+                        <button class="btn-tela" onclick="cambiarTela('lino')" style="background-color: #d35400;">Ocre</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80" alt="Sillas">
+                <h3>Hogar</h3>
+                <p>Sillas, sillones y respaldos de cama.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80" alt="Autos">
+                <h3>Vehículos</h3>
+                <p>Tapizados en cuero y tela automotor.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="btn-whatsapp">Consultar por WhatsApp</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
