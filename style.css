@@ -117,3 +117,28 @@ footer {
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+/* Sección Ubicación */
+#ubicacion {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Un gris muy clarito para diferenciar */
+}
+
+.mapa-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Esto mantiene la proporción de video/mapa */
+    position: relative;
+    height: 0;
+    max-width: 800px; /* Para que no sea gigante en PC */
+    margin: 20px auto; /* Centrado */
+    border-radius: 15px; /* Bordes redondeados modernos */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.mapa-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
