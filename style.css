@@ -124,22 +124,23 @@ footer {
     background-color: #f9f9f9;
 }
 
+/* --- Estilos del Mapa (Versión Tarjeta Cuadrada) --- */
 .mapa-responsive {
     overflow: hidden;
-    padding-bottom: 56.25%; /* Esto mantiene la proporción rectangular */
     position: relative;
-    height: 0;
-    /* AQUÍ ESTÁ EL TRUCO: Lo limitamos a 500px de ancho */
-    max-width: 500px; 
-    margin: 20px auto; /* Esto lo centra */
+    
+    /* ANCHO: Igual que antes */
+    width: 100%;
+    max-width: 300px; 
+
+    /* ALTO: Acá está la solución. Lo forzamos a 300px */
+    height: 300px;    
+    
+    /* Sacamos el padding-bottom que estiraba todo */
+    padding-bottom: 0; 
+
+    margin: 20px auto; 
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.mapa-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+    border: 1px solid #ddd;
 }
