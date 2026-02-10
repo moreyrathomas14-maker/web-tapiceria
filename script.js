@@ -4,7 +4,7 @@ function cambiarTela(tipo) {
     
     // IMPORTANTE: Poné tu número real aquí (sin el + y con el código de área)
     // Ejemplo: 5493525649575
-    const miTelefono = "5493525XXXXXX"; 
+    const miTelefono = "5493525649575"; 
 
     const catalogoTelas = {
         'pana-azul': {
