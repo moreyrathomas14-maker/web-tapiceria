@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GM Tapizados | Jesús María</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -40,94 +41,123 @@
             </div>
         </section>
 
-        <section id="materiales" class="gm-materiales">
+        <section id="materiales" class="gm-materiales-section">
             <h2>Nuestros Materiales</h2>
-            <p>Elegimos los mejores géneros para que tus muebles destaquen en cualquier ambiente.</p>
+            <p class="subtitulo-seccion">Tocá cada material para ver más colores y detalles de la textura.</p>
 
-            <div class="gm-categoria">
+            <div class="gm-categoria-container">
                 <h3>🛋️ Línea Confort y Diseño (Telas de Interior)</h3>
-                <p><em>Ideales para darle calidez, textura y estilo a sillones, sillas de comedor y respaldos.</em></p>
-                <div class="gm-colores">
-                    <strong>Colores de referencia:</strong> ⚫ Negro | ⚪ Blanco | 🤎 Beige | 🔵 Azul | 🟤 Marrón
-                </div>
-
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&w=150&q=80" alt="Textura Pana" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Pana Pané</h4>
+                
+                <div class="gm-material-card" onclick="toggleMaterial(this)">
+                    <img src="https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&w=800&q=80" alt="Textura Pana Detalle" class="gm-banner-img">
+                    <div class="gm-card-header">
+                        <h4>Pana Pané <i class="fas fa-chevron-down flecha"></i></h4>
                         <p>Súper suave al tacto y muy elegante. Aporta un acabado premium.</p>
                     </div>
-                </div>
-
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1584555613497-9ecf9dd06f68?auto=format&fit=crop&w=150&q=80" alt="Textura Bouclé" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Bouclé y Mecha</h4>
-                        <p>La última tendencia en diseño. Aportan una textura única y mucha calidez.</p>
+                    <div class="gm-expansion">
+                        <h5>Variantes de color:</h5>
+                        <div class="gm-colores-grid">
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?auto=format&fit=crop&w=200&q=60" alt="Pana Violeta"><span>Violeta</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=200&q=60" alt="Pana Azul"><span>Azul Marino</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1617325247661-675ab4b64b51?auto=format&fit=crop&w=200&q=60" alt="Pana Verde"><span>Verde</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1504030571123-ff1447541735?auto=format&fit=crop&w=200&q=60" alt="Pana Gris"><span>Gris Topo</span></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=150&q=80" alt="Textura Lino" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Lino y Tusor</h4>
-                        <p>Frescos y naturales. El lino es ideal para tapizados fijos; el tusor, para fundas.</p>
+                <div class="gm-material-card" onclick="toggleMaterial(this)">
+                    <img src="https://images.unsplash.com/photo-1584555613497-9ecf9dd06f68?auto=format&fit=crop&w=800&q=80" alt="Textura Bouclé Detalle" class="gm-banner-img">
+                    <div class="gm-card-header">
+                        <h4>Bouclé y Mecha <i class="fas fa-chevron-down flecha"></i></h4>
+                        <p>La última tendencia. Textura única, rizada y de mucha calidez.</p>
+                    </div>
+                    <div class="gm-expansion">
+                        <h5>Variantes de color:</h5>
+                        <div class="gm-colores-grid">
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1573575657356-e4573d4d0936?auto=format&fit=crop&w=200&q=60" alt="Boucle Crudo"><span>Crudo</span></div>
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1594019790439-5075b2608da1?auto=format&fit=crop&w=200&q=60" alt="Boucle Gris"><span>Gris Perla</span></div>
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1621353355962-74806e41d9c3?auto=format&fit=crop&w=200&q=60" alt="Boucle Tostado"><span>Tostado</span></div>
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=200&q=60" alt="Boucle Blanco"><span>Blanco</span></div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="gm-material-card" onclick="toggleMaterial(this)">
+                    <img src="https://images.unsplash.com/photo-1598300056393-4efd99697764?auto=format&fit=crop&w=800&q=80" alt="Textura Lino Detalle" class="gm-banner-img">
+                    <div class="gm-card-header">
+                        <h4>Lino y Tusor <i class="fas fa-chevron-down flecha"></i></h4>
+                        <p>Frescos y naturales. El look descontracturado ideal para fundas y tapizados fijos.</p>
+                    </div>
+                    <div class="gm-expansion">
+                        <h5>Variantes de color:</h5>
+                        <div class="gm-colores-grid">
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=200&q=60" alt="Lino Beige"><span>Beige Natural</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?auto=format&fit=crop&w=200&q=60" alt="Lino Gris Claro"><span>Gris Claro</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1598300048579-5e32f4893808?auto=format&fit=crop&w=200&q=60" alt="Lino Off White"><span>Off White</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1600685091890-e5331bb0f417?auto=format&fit=crop&w=200&q=60" alt="Lino Rosa Viejo"><span>Rosa Viejo</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gm-categoria-container">
+                <h3>✨ Línea Práctica (Cueros y Sintéticos)</h3>
                 
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?auto=format&fit=crop&w=150&q=80" alt="Textura Spazio" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Spazio y Glasgow</h4>
-                        <p>Telas tramadas de excelente resistencia. Ideales para el trote del día a día.</p>
+                <div class="gm-material-card" onclick="toggleMaterial(this)">
+                    <img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=800&q=80" alt="Textura Cuero Detalle" class="gm-banner-img">
+                    <div class="gm-card-header">
+                        <h4>Cuero Vacuno <i class="fas fa-chevron-down flecha"></i></h4>
+                        <p>Máxima calidad y aroma inconfundible. Un material noble que envejece con estilo.</p>
+                    </div>
+                    <div class="gm-expansion">
+                        <h5>Variantes de color:</h5>
+                        <div class="gm-colores-grid">
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?auto=format&fit=crop&w=200&q=60" alt="Cuero Marron"><span>Marrón Suela</span></div>
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1532421572760-28037906343c?auto=format&fit=crop&w=200&q=60" alt="Cuero Negro"><span>Negro Mate</span></div>
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1514996502496-788902c45954?auto=format&fit=crop&w=200&q=60" alt="Cuero Chocolate"><span>Chocolate</span></div>
+                             <div class="color-item"><img src="https://images.unsplash.com/photo-1624373687676-6c5f7a3007d3?auto=format&fit=crop&w=200&q=60" alt="Cuero Color"><span>Rojo Antiguo</span></div>
+                        </div>
                     </div>
                 </div>
-                <p class="gm-aviso">📌 Consultar disponibilidad de colores.</p>
+
+                <div class="gm-material-card" onclick="toggleMaterial(this)">
+                    <img src="https://images.unsplash.com/photo-1617957743097-0d20d9b27389?auto=format&fit=crop&w=800&q=80" alt="Textura Cuerina Detalle" class="gm-banner-img">
+                    <div class="gm-card-header">
+                        <h4>Cuerina, Talampaya y Madrin <i class="fas fa-chevron-down flecha"></i></h4>
+                        <p>Alternativas sintéticas súper prácticas. Ideales para cocina y alto tránsito por su fácil limpieza.</p>
+                    </div>
+                    <div class="gm-expansion">
+                        <h5>Variantes de color:</h5>
+                        <div class="gm-colores-grid">
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1567016432779-094069958ad5?auto=format&fit=crop&w=200&q=60" alt="Cuerina Verde"><span>Verde Inglés</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1600423115367-23c00131031e?auto=format&fit=crop&w=200&q=60" alt="Cuerina Crema"><span>Crema</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1572016256405-063928951884?auto=format&fit=crop&w=200&q=60" alt="Cuerina Negra Texturada"><span>Negro Grano</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1596320868777-4b2f956299f7?auto=format&fit=crop&w=200&q=60" alt="Cuerina Blanca"><span>Blanco Puro</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="gm-categoria">
-                <h3>✨ Línea Práctica y Ejecutiva (Cueros y Sintéticos)</h3>
-                <p><em>Pensados para una limpieza rápida, alta durabilidad y un acabado sofisticado.</em></p>
-                
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=150&q=80" alt="Cuero Vacuno" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Cuero Vacuno (Pelo liso colores)</h4>
-                        <p>La opción de máxima calidad y durabilidad. Un material noble para sillones de alta gama.</p>
+            <div class="gm-categoria-container">
+                <h3>☀️ Línea Exterior (Outdoor)</h3>
+                 <div class="gm-material-card" onclick="toggleMaterial(this)">
+                    <img src="https://images.unsplash.com/photo-1533106958148-daab0e5fc5c5?auto=format&fit=crop&w=800&q=80" alt="Textura Nautica Detalle" class="gm-banner-img">
+                    <div class="gm-card-header">
+                        <h4>Náuticas y Coversol <i class="fas fa-chevron-down flecha"></i></h4>
+                        <p>Materiales técnicos: impermeables, anti-hongos y resistentes al sol (UV). Obligatorio para intemperie.</p>
+                    </div>
+                    <div class="gm-expansion">
+                        <h5>Variantes de color:</h5>
+                        <div class="gm-colores-grid">
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1539589394-942390858466?auto=format&fit=crop&w=200&q=60" alt="Nautica Azul Francia"><span>Azul Francia</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1588612448727-c1b1f4366378?auto=format&fit=crop&w=200&q=60" alt="Nautica Blanca"><span>Blanco Nieve</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1600187734590-c683210221c0?auto=format&fit=crop&w=200&q=60" alt="Nautica Gris Plata"><span>Gris Plata</span></div>
+                            <div class="color-item"><img src="https://images.unsplash.com/photo-1598043514891-9f2f50a909b5?auto=format&fit=crop&w=200&q=60" alt="Coversol Arena"><span>Arena (Coversol)</span></div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1567016432779-094069958ad5?auto=format&fit=crop&w=150&q=80" alt="Cuerina" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Cuerotex, Cuerina y Madrin</h4>
-                        <p>Alternativas sintéticas súper versátiles. Se limpian con un simple trapo húmedo.</p>
-                    </div>
-                </div>
-                <p class="gm-aviso">📌 Consultar disponibilidad de colores.</p>
             </div>
-
-            <div class="gm-categoria">
-                <h3>☀️ Línea Exterior y Alta Resistencia</h3>
-                <p><em>Materiales técnicos diseñados para soportar el clima, el sol y el uso extremo.</em></p>
-
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1533106958148-daab0e5fc5c5?auto=format&fit=crop&w=150&q=80" alt="Náutica" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Náuticas Bicapa y Coversol</h4>
-                        <p>Impermeables, microperforadas y resistentes a los rayos UV. Para colchonetas y reposeras.</p>
-                    </div>
-                </div>
-
-                <div class="gm-tarjeta">
-                    <img src="https://images.unsplash.com/photo-1620002093390-0089e02eb234?auto=format&fit=crop&w=150&q=80" alt="Lonas" class="gm-imagen-textura">
-                    <div class="gm-info">
-                        <h4>Lonas Lisas y Tejido Multitask</h4>
-                        <p>Robustas, resistentes al desgarro y todo terreno. Clásicas para toldos y fundas protectoras.</p>
-                    </div>
-                </div>
-                <p class="gm-aviso">📌 Consultar disponibilidad de colores.</p>
-            </div>
+            <p class="gm-aviso" style="text-align: center; margin-top: 20px;">⚠️ Las imágenes son ilustrativas para mostrar la textura. Consultar catálogo físico para colores exactos.</p>
         </section>
 
         <section id="servicios">

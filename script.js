@@ -1,9 +1,9 @@
+// Función para el Visualizador de Muebles (La que ya tenías)
 function cambiarTela(tipo) {
     const imagenMueble = document.getElementById('mueble-base');
     const linkWA = document.getElementById('whatsapp-link');
     
-    // IMPORTANTE: Poné tu número real aquí (sin el + y con el código de área)
-    // Ejemplo: 5493525649575
+    // Tu número real
     const miTelefono = "5493525649575"; 
 
     const catalogoTelas = {
@@ -29,15 +29,22 @@ function cambiarTela(tipo) {
     imagenMueble.style.opacity = 0;
     
     setTimeout(() => {
-        // 1. Cambiamos la imagen del mueble
         imagenMueble.src = catalogoTelas[tipo].img;
         imagenMueble.style.opacity = 1;
         
-        // 2. Preparamos el mensaje personalizado
         const mensaje = `Hola! Estuve viendo la web de GM Tapizados y me interesa un presupuesto para el color: ${catalogoTelas[tipo].nombre}`;
         const mensajeCodificado = encodeURIComponent(mensaje);
         
-        // 3. Actualizamos el link del botón de WhatsApp
         linkWA.href = `https://wa.me/${miTelefono}?text=${mensajeCodificado}`;
     }, 300);
+}
+
+// === NUEVA FUNCIÓN: ACORDEÓN DE MATERIALES ===
+// Esta función se activa al hacer clic en una tarjeta de material
+function toggleMaterial(elementoTarjeta) {
+    // 1. 'elementoTarjeta' es la tarjeta completa a la que se le hizo clic (el <div> con clase gm-material-card)
+    
+    // 2. Le agregamos o quitamos la clase 'activo'. 
+    // CSS se encarga del resto (mostrar la expansión y girar la flecha)
+    elementoTarjeta.classList.toggle('activo');
 }
