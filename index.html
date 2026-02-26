@@ -53,6 +53,7 @@
                         <li class="activo" onclick="filtrarCategoria('todas', this)">Mostrar Todas</li>
                         <li onclick="filtrarCategoria('interior', this)">Telas de Interior</li>
                         <li onclick="filtrarCategoria('sinteticos', this)">Cueros y Sintéticos</li>
+                        <li onclick="filtrarCategoria('automotor', this)">Línea Automotor</li>
                         <li onclick="filtrarCategoria('exterior', this)">Exterior y Trabajo</li>
                     </ul>
                 </aside>
@@ -60,61 +61,89 @@
                 <div class="contenido-materiales" id="contenedor-tarjetas">
                     
                     <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1043/800/600" alt="Textura Pana" class="gm-banner-img">
+                        <img src="img/img160.jpg" alt="Pana Pané" class="gm-banner-img">
                         <div class="gm-card-header">
                             <h4>Pana Pané <i class="fas fa-chevron-down flecha"></i></h4>
                             <p>Suave al tacto y elegante. Acabado premium.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                <div class="color-item"><img src="https://picsum.photos/id/102/100/100" alt="Color"><span>Violeta</span></div>
-                                <div class="color-item"><img src="https://picsum.photos/id/103/100/100" alt="Color"><span>Azul</span></div>
-                                <div class="color-item"><img src="https://picsum.photos/id/104/100/100" alt="Color"><span>Gris</span></div>
+                                <div class="color-item"><img src="img/img163.jpg" alt="Color"><span>Color 1</span></div>
+                                <div class="color-item"><img src="img/img166.jpg" alt="Color"><span>Color 2</span></div>
+                                <div class="color-item"><img src="img/img169.jpg" alt="Color"><span>Color 3</span></div>
+                                <div class="color-item"><img src="img/img172.jpg" alt="Color"><span>Color 4</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1050/800/600" alt="Textura Bouclé" class="gm-banner-img">
+                        <img src="img/img45.jpg" alt="Pana Clásica" class="gm-banner-img">
                         <div class="gm-card-header">
-                            <h4>Bouclé y Mecha <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Textura rizada, calidez y última tendencia.</p>
+                            <h4>Pana Clásica <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Un clásico indiscutible. Resistencia y mucha calidez.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/111/100/100" alt="Color"><span>Crudo</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/112/100/100" alt="Color"><span>Gris Perla</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/113/100/100" alt="Color"><span>Tostado</span></div>
+                                <div class="color-item"><img src="img/img48.jpg" alt="Color"><span>Color 1</span></div>
+                                <div class="color-item"><img src="img/img51.jpg" alt="Color"><span>Color 2</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1015/800/600" alt="Textura Lino" class="gm-banner-img">
+                        <img src="img/img36.jpg" alt="Bouclé Liso" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Bouclé Liso <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Tendencia en diseño de interiores. Textura rizada y suave.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="img/img39.jpg" alt="Color"><span>Opción 1</span></div>
+                                 <div class="color-item"><img src="img/img42.jpg" alt="Color"><span>Opción 2</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
+                        <img src="img/img105.jpg" alt="Mecha" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Tela Mecha <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Trama rústica y descontracturada con un aspecto único.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="img/img108.jpg" alt="Color"><span>Opción 1</span></div>
+                                 <div class="color-item"><img src="img/img111.jpg" alt="Color"><span>Opción 2</span></div>
+                                 <div class="color-item"><img src="img/img114.jpg" alt="Color"><span>Opción 3</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
+                        <img src="img/img138.jpg" alt="Lino" class="gm-banner-img">
                         <div class="gm-card-header">
                             <h4>Lino <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Fresco y natural. Ideal tapizados fijos.</p>
+                            <p>Fresco y natural. Ideal tapizados fijos y ambientes luminosos.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/115/100/100" alt="Color"><span>Beige</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/116/100/100" alt="Color"><span>Gris Claro</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/117/100/100" alt="Color"><span>Arena</span></div>
+                                 <div class="color-item"><img src="img/img141.jpg" alt="Color"><span>Color 1</span></div>
+                                 <div class="color-item"><img src="img/img144.jpg" alt="Color"><span>Color 2</span></div>
+                                 <div class="color-item"><img src="img/img147.jpg" alt="Color"><span>Color 3</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1016/800/600" alt="Textura Tusor" class="gm-banner-img">
+                        <img src="img/img96.jpg" alt="Tusor" class="gm-banner-img">
                         <div class="gm-card-header">
                             <h4>Tusor <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>El rey de las fundas. Rústico y lavable.</p>
+                            <p>El rey de las fundas. Rústico, arrugadito y fácil de lavar.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/125/100/100" alt="Color"><span>Off White</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/126/100/100" alt="Color"><span>Elefante</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/127/100/100" alt="Color"><span>Rosa</span></div>
+                                 <div class="color-item"><img src="img/img99.jpg" alt="Color"><span>Opción 1</span></div>
+                                 <div class="color-item"><img src="img/img102.jpg" alt="Color"><span>Opción 2</span></div>
                             </div>
                         </div>
                     </div>
@@ -123,73 +152,137 @@
                         <img src="https://picsum.photos/id/1080/800/600" alt="Textura Spazio" class="gm-banner-img">
                         <div class="gm-card-header">
                             <h4>Spazio y Glasgow <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Telas tramadas de alta resistencia.</p>
+                            <p>Telas tramadas de alta resistencia. Ideales uso diario.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <p style="padding: 10px; color: #666; font-size: 0.9rem;">Imágenes en proceso de carga. Consultar colores disponibles.</p>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="sinteticos" onclick="toggleMaterial(this)">
+                        <img src="img/img20.jpg" alt="Cuero Vacuno" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Cuero Vacuno (Liso) <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Material noble de máxima calidad. Envejece con estilo.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/130/100/100" alt="Color"><span>Gris Medio</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/131/100/100" alt="Color"><span>Tiza</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/132/100/100" alt="Color"><span>Negro</span></div>
+                                 <div class="color-item"><img src="img/img23.jpg" alt="Color"><span>Color 1</span></div>
+                                 <div class="color-item"><img src="img/img24.jpg" alt="Color"><span>Color 2</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="gm-material-card" data-categoria="sinteticos" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1062/800/600" alt="Textura Cuero" class="gm-banner-img">
+                        <img src="img/img58.jpg" alt="Cuero Vacuno Pelo" class="gm-banner-img">
                         <div class="gm-card-header">
-                            <h4>Cuero Vacuno <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Material noble de máxima calidad.</p>
+                            <h4>Cuero Vacuno con Pelo <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Estilo rústico y exótico, perfecto para piezas de diseño.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/120/100/100" alt="Color"><span>Suela</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/121/100/100" alt="Color"><span>Negro</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/122/100/100" alt="Color"><span>Chocolate</span></div>
+                                 <div class="color-item"><img src="img/img61.jpg" alt="Color"><span>Opción 1</span></div>
+                                 <div class="color-item"><img src="img/img64.jpg" alt="Color"><span>Opción 2</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="gm-material-card" data-categoria="sinteticos" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1070/800/600" alt="Textura Cuerina" class="gm-banner-img">
+                        <img src="img/img120.jpg" alt="Cuero Madryn" class="gm-banner-img">
                         <div class="gm-card-header">
-                            <h4>Cuerina y Cuerotex <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Alternativas prácticas, fácil limpieza.</p>
+                            <h4>Cuero Madryn <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Sintético premium muy flexible con un aspecto similar al cuero.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/135/100/100" alt="Color"><span>Blanco</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/136/100/100" alt="Color"><span>Negro</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/137/100/100" alt="Color"><span>Rojo</span></div>
+                                 <div class="color-item"><img src="img/img123.jpg" alt="Color"><span>Color 1</span></div>
+                                 <div class="color-item"><img src="img/img126.jpg" alt="Color"><span>Color 2</span></div>
+                                 <div class="color-item"><img src="img/img129.jpg" alt="Color"><span>Color 3</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="gm-material-card" data-categoria="sinteticos" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1071/800/600" alt="Textura Madrin" class="gm-banner-img">
+                        <img src="img/img89.jpg" alt="Cuerinas" class="gm-banner-img">
                         <div class="gm-card-header">
-                            <h4>Madrin <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Sintético flexible con aspecto a cuero.</p>
+                            <h4>Cuerinas y Cuerotex <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Prácticas, impermeables y súper fáciles de limpiar con trapo húmedo.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/140/100/100" alt="Color"><span>Visón</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/141/100/100" alt="Color"><span>Tostado</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/142/100/100" alt="Color"><span>Gris</span></div>
+                                 <div class="color-item"><img src="img/img92.jpg" alt="Color"><span>Opción 1</span></div>
+                                 <div class="color-item"><img src="img/img93.jpg" alt="Color"><span>Opción 2</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="automotor" onclick="toggleMaterial(this)">
+                        <img src="img/img5.jpg" alt="Telas Automotor" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Telas Automotor <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Materiales técnicos y originales para butacas y tapicería vehicular.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="img/img7.jpg" alt="Color"><span>Trama 1</span></div>
+                                 <div class="color-item"><img src="img/img8.jpg" alt="Color"><span>Trama 2</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1084/800/600" alt="Textura Nautica" class="gm-banner-img">
+                        <img src="img/img54.jpg" alt="Náutica Bicapa" class="gm-banner-img">
                         <div class="gm-card-header">
                             <h4>Náuticas Bicapa <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Impermeables, ideal intemperie (UV).</p>
+                            <p>Impermeables, anti-hongos y resistentes a rayos UV. Ideal exterior.</p>
                         </div>
                         <div class="gm-expansion">
                             <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/145/100/100" alt="Color"><span>Francia</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/146/100/100" alt="Color"><span>Blanco</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/147/100/100" alt="Color"><span>Plata</span></div>
+                                 <div class="color-item"><img src="img/img55.jpg" alt="Color"><span>Color 1</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
+                        <img src="img/img67.jpg" alt="Telas Impermeables" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Telas Impermeables <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Gran variedad de texturas preparadas para repeler líquidos y humedad.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="img/img68.jpg" alt="Color"><span>Opción 1</span></div>
+                                 <div class="color-item"><img src="img/img71.jpg" alt="Color"><span>Opción 2</span></div>
+                                 <div class="color-item"><img src="img/img74.jpg" alt="Color"><span>Opción 3</span></div>
+                                 <div class="color-item"><img src="img/img77.jpg" alt="Color"><span>Opción 4</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
+                        <img src="img/img27.jpg" alt="Lonas Lisas" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Lonas Lisas <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Robustas y clásicas. La mejor opción para toldos y fundas protectoras.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="img/img30.jpg" alt="Color"><span>Opción 1</span></div>
+                                 <div class="color-item"><img src="img/img33.jpg" alt="Color"><span>Opción 2</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
+                        <img src="img/img11.jpg" alt="Tejido Multitask" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Tejido Multitask <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Súper resistente a fricción y desgarros. Tapicería de alta exigencia.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="img/img14.jpg" alt="Color"><span>Trama 1</span></div>
+                                 <div class="color-item"><img src="img/img17.jpg" alt="Color"><span>Trama 2</span></div>
                             </div>
                         </div>
                     </div>
@@ -198,44 +291,10 @@
                         <img src="https://picsum.photos/id/1073/800/600" alt="Textura Coversol" class="gm-banner-img">
                         <div class="gm-card-header">
                             <h4>Coversol <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Microperforada. Drena el agua, no calienta.</p>
+                            <p>Microperforada. Drena el agua, no levanta temperatura. Ideal reposeras.</p>
                         </div>
                         <div class="gm-expansion">
-                            <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/151/100/100" alt="Color"><span>Arena</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/152/100/100" alt="Color"><span>Negro</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/153/100/100" alt="Color"><span>Blanco</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1074/800/600" alt="Textura Lona" class="gm-banner-img">
-                        <div class="gm-card-header">
-                            <h4>Lonas Lisas <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Robustas, clásicas para toldos y fundas.</p>
-                        </div>
-                        <div class="gm-expansion">
-                            <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/155/100/100" alt="Color"><span>Verde</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/156/100/100" alt="Color"><span>Azul</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/157/100/100" alt="Color"><span>Crudo</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
-                        <img src="https://picsum.photos/id/1075/800/600" alt="Textura Multitask" class="gm-banner-img">
-                        <div class="gm-card-header">
-                            <h4>Tejido Multitask <i class="fas fa-chevron-down flecha"></i></h4>
-                            <p>Súper resistente a fricción y desgarros.</p>
-                        </div>
-                        <div class="gm-expansion">
-                            <div class="gm-colores-grid">
-                                 <div class="color-item"><img src="https://picsum.photos/id/160/100/100" alt="Color"><span>Negro</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/161/100/100" alt="Color"><span>Plomo</span></div>
-                                 <div class="color-item"><img src="https://picsum.photos/id/162/100/100" alt="Color"><span>Azul</span></div>
-                            </div>
+                             <p style="padding: 10px; color: #666; font-size: 0.9rem;">Imágenes en proceso de carga. Consultar colores disponibles.</p>
                         </div>
                     </div>
 
