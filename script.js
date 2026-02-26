@@ -33,7 +33,7 @@ function cambiarTela(tipo) {
         imagenMueble.src = catalogoTelas[tipo].img;
         imagenMueble.style.opacity = 1;
         
-        // 2. Preparamos el mensaje personalizado para Thomas
+        // 2. Preparamos el mensaje personalizado
         const mensaje = `Hola! Estuve viendo la web de GM Tapizados y me interesa un presupuesto para el color: ${catalogoTelas[tipo].nombre}`;
         const mensajeCodificado = encodeURIComponent(mensaje);
         

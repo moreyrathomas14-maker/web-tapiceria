@@ -18,7 +18,7 @@ header {
     color: white;
     padding: 2rem;
     text-align: center;
-    border-bottom: 4px solid #d4af37; /* Color dorado tapicero */
+    border-bottom: 4px solid #d4af37;
 }
 
 header h1 span { color: #d4af37; }
@@ -79,74 +79,93 @@ header h1 span { color: #d4af37; }
 
 .btn-tela:hover { opacity: 0.8; }
 
+/* --- NUEVO: Estilos para la sección Materiales --- */
+.gm-materiales {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.gm-materiales h2 {
+    margin-bottom: 10px;
+}
+
+.gm-categoria {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.gm-categoria h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.gm-tarjeta {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+}
+
+.gm-imagen-textura {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.gm-info h4 {
+    margin: 0 0 5px 0;
+    color: #d4af37; /* Dorado tapicero */
+}
+
+.gm-info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.gm-colores {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.gm-aviso {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
 /* Tarjetas de Servicios */
 #servicios {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
     padding: 4rem 1rem;
-    flex-wrap: wrap;
 }
 
-.tarjeta {
-    background: white;
-    width: 300px;
-    text-align: center;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.tarjeta img { width: 100%; height: 200px; object-fit: cover; }
-.tarjeta h3 { margin: 1rem 0; }
-.tarjeta p { padding: 0 1rem 1.5rem; color: #666; }
-
-/* Botón WhatsApp Fijo */
-footer {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-.btn-whatsapp {
-    background-color: #25d366;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-/* --- Estilos del Mapa (Versión Compacta) --- */
-#ubicacion {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-}
-
-/* --- Estilos del Mapa (Versión Tarjeta Cuadrada) --- */
-.mapa-responsive {
-    overflow: hidden;
-    position: relative;
-    
-    /* ANCHO: Igual que antes */
-    width: 100%;
-    max-width: 300px; 
-
-    /* ALTO: Acá está la solución. Lo forzamos a 300px */
-    height: 300px;    
-    
-    /* Sacamos el padding-bottom que estiraba todo */
-    padding-bottom: 0; 
-
-    margin: 20px auto; 
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
-}/* --- Estilos del Nuevo Catálogo --- */
 .categoria-principal {
     background: white;
-    margin-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -186,16 +205,41 @@ footer {
     width: 100%;
     height: 180px;
     object-fit: cover;
-}/* --- CORRECCIÓN DE DISEÑO --- */
-#servicios {
-    display: flex;
-    flex-direction: column; /* Esto obliga a que se pongan uno abajo del otro */
-    align-items: center;    /* Esto los centra */
 }
 
-/* Ajuste para que las categorías ocupen buen ancho */
-.categoria-principal {
+/* Estilos del Mapa */
+#ubicacion {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.mapa-responsive {
+    overflow: hidden;
+    position: relative;
     width: 100%;
-    max-width: 900px; /* Ancho máximo para que no se estiren demasiado */
-    margin-bottom: 40px;
+    max-width: 300px; 
+    height: 300px;    
+    margin: 20px auto; 
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+/* Botón WhatsApp Fijo */
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
