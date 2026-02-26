@@ -42,64 +42,152 @@
         </section>
 
         <section id="materiales" class="gm-materiales-section">
-            <h2>Nuestros Materiales</h2>
-            <p class="subtitulo-seccion">Tocá cada material para ver más colores y detalles de la textura.</p>
-
-            <div class="gm-categoria-container">
-                <h3>🛋️ Línea Confort y Diseño (Telas de Interior)</h3>
-                
-                <div class="gm-material-card" onclick="toggleMaterial(this)">
-                    <img src="https://picsum.photos/id/1043/800/200" alt="Textura Pana" class="gm-banner-img">
-                    <div class="gm-card-header">
-                        <h4>Pana Pané <i class="fas fa-chevron-down flecha"></i></h4>
-                        <p>Súper suave al tacto y muy elegante. Aporta un acabado premium.</p>
-                    </div>
-                    <div class="gm-expansion">
-                        <h5>Variantes de color:</h5>
-                        <div class="gm-colores-grid">
-                            <div class="color-item"><img src="https://picsum.photos/id/102/100/100" alt="Color 1"><span>Violeta</span></div>
-                            <div class="color-item"><img src="https://picsum.photos/id/103/100/100" alt="Color 2"><span>Azul Marino</span></div>
-                            <div class="color-item"><img src="https://picsum.photos/id/104/100/100" alt="Color 3"><span>Verde</span></div>
-                            <div class="color-item"><img src="https://picsum.photos/id/106/100/100" alt="Color 4"><span>Gris Topo</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gm-material-card" onclick="toggleMaterial(this)">
-                    <img src="https://picsum.photos/id/1050/800/200" alt="Textura Bouclé" class="gm-banner-img">
-                    <div class="gm-card-header">
-                        <h4>Bouclé y Mecha <i class="fas fa-chevron-down flecha"></i></h4>
-                        <p>La última tendencia. Textura única, rizada y de mucha calidez.</p>
-                    </div>
-                    <div class="gm-expansion">
-                        <h5>Variantes de color:</h5>
-                        <div class="gm-colores-grid">
-                             <div class="color-item"><img src="https://picsum.photos/id/111/100/100" alt="Color 1"><span>Crudo</span></div>
-                             <div class="color-item"><img src="https://picsum.photos/id/112/100/100" alt="Color 2"><span>Gris Perla</span></div>
-                             <div class="color-item"><img src="https://picsum.photos/id/113/100/100" alt="Color 3"><span>Tostado</span></div>
-                             <div class="color-item"><img src="https://picsum.photos/id/114/100/100" alt="Color 4"><span>Blanco</span></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="texto-intro" style="margin-bottom: 30px;">
+                <h2>Nuestro Catálogo de Materiales</h2>
+                <p>Usá el menú para filtrar según el estilo que busques.</p>
             </div>
 
-            <div class="gm-categoria-container">
-                <h3>✨ Línea Práctica (Cueros y Sintéticos)</h3>
-                
-                <div class="gm-material-card" onclick="toggleMaterial(this)">
-                    <img src="https://picsum.photos/id/1062/800/200" alt="Textura Cuero" class="gm-banner-img">
-                    <div class="gm-card-header">
-                        <h4>Cuero Vacuno <i class="fas fa-chevron-down flecha"></i></h4>
-                        <p>Máxima calidad y aroma inconfundible. Un material noble que envejece con estilo.</p>
-                    </div>
-                    <div class="gm-expansion">
-                        <h5>Variantes de color:</h5>
-                        <div class="gm-colores-grid">
-                             <div class="color-item"><img src="https://picsum.photos/id/120/100/100" alt="Color 1"><span>Marrón Suela</span></div>
-                             <div class="color-item"><img src="https://picsum.photos/id/121/100/100" alt="Color 2"><span>Negro Mate</span></div>
-                             <div class="color-item"><img src="https://picsum.photos/id/122/100/100" alt="Color 3"><span>Chocolate</span></div>
+            <div class="catalogo-wrapper">
+                <aside class="sidebar-filtros">
+                    <h3>Categorías</h3>
+                    <ul class="lista-categorias">
+                        <li class="activo" onclick="filtrarCategoria('todas', this)">Mostrar Todas</li>
+                        <li onclick="filtrarCategoria('interior', this)">🛋️ Telas de Interior</li>
+                        <li onclick="filtrarCategoria('sinteticos', this)">✨ Cueros y Sintéticos</li>
+                        <li onclick="filtrarCategoria('exterior', this)">☀️ Exterior y Trabajo</li>
+                    </ul>
+                </aside>
+
+                <div class="contenido-materiales" id="contenedor-tarjetas">
+                    
+                    <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1043/800/200" alt="Textura Pana" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Pana Pané <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Súper suave al tacto y muy elegante. Aporta un acabado premium.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <h5>Variantes de color (Ejemplos):</h5>
+                            <div class="gm-colores-grid">
+                                <div class="color-item"><img src="https://picsum.photos/id/102/100/100" alt="Color"><span>Violeta</span></div>
+                                <div class="color-item"><img src="https://picsum.photos/id/103/100/100" alt="Color"><span>Azul Marino</span></div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1050/800/200" alt="Textura Bouclé" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Bouclé y Mecha <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>La última tendencia. Textura única, rizada y de mucha calidez.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="https://picsum.photos/id/111/100/100" alt="Color"><span>Crudo</span></div>
+                                 <div class="color-item"><img src="https://picsum.photos/id/112/100/100" alt="Color"><span>Gris Perla</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1015/800/200" alt="Textura Lino" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Lino <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Fresco y natural. Ideal para tapizados fijos y ambientes luminosos.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="https://picsum.photos/id/115/100/100" alt="Color"><span>Beige</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1016/800/200" alt="Textura Tusor" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Tusor <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>El rey de las fundas de sillón. Aspecto rústico, arrugadito y fácil de lavar.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="interior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1080/800/200" alt="Textura Spazio" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Spazio y Glasgow <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Telas tramadas de excelente resistencia. Ideales para el trote diario.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="sinteticos" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1062/800/200" alt="Textura Cuero" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Cuero Vacuno (Pelo liso colores) <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Máxima calidad. Un material noble que envejece con estilo.</p>
+                        </div>
+                        <div class="gm-expansion">
+                            <div class="gm-colores-grid">
+                                 <div class="color-item"><img src="https://picsum.photos/id/120/100/100" alt="Color"><span>Marrón Suela</span></div>
+                                 <div class="color-item"><img src="https://picsum.photos/id/121/100/100" alt="Color"><span>Negro Mate</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="sinteticos" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1070/800/200" alt="Textura Cuerina" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Cuerina y Cuerotex <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Alternativas sintéticas impermeables. Súper fáciles de limpiar, ideales para sillas de cocina.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="sinteticos" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1071/800/200" alt="Textura Madrin" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Madrin <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Sintético de alta resistencia y flexibilidad. Excelente acabado similar al cuero.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1084/800/200" alt="Textura Nautica" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Náuticas Bicapa <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Impermeables, anti-hongos y resistentes a los rayos UV. Obligatorio para colchonetas a la intemperie.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1073/800/200" alt="Textura Coversol" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Coversol <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Tela microperforada. No junta calor y drena el agua. La estrella de las reposeras de pileta.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1074/800/200" alt="Textura Lona" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Lonas Lisas <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Robustas y clásicas. La mejor opción para toldos, gacebos y fundas protectoras.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
+                    <div class="gm-material-card" data-categoria="exterior" onclick="toggleMaterial(this)">
+                        <img src="https://picsum.photos/id/1075/800/200" alt="Textura Multitask" class="gm-banner-img">
+                        <div class="gm-card-header">
+                            <h4>Tejido Multitask <i class="fas fa-chevron-down flecha"></i></h4>
+                            <p>Súper resistente al desgarro y la fricción. Ideal para trabajos técnicos o sillas de oficina de alto tránsito.</p>
+                        </div>
+                        <div class="gm-expansion"><p>Consultar disponibilidad de colores.</p></div>
+                    </div>
+
                 </div>
             </div>
         </section>

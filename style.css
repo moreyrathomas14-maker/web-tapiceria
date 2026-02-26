@@ -30,6 +30,11 @@ header h1 span { color: #d4af37; }
     padding: 0 1rem;
 }
 
+.texto-intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .contenedor-interactivo {
     display: flex;
     flex-wrap: wrap;
@@ -79,30 +84,66 @@ header h1 span { color: #d4af37; }
 .btn-tela:hover { opacity: 0.8; }
 
 /* =========================================
-   NUEVOS ESTILOS: SECCIÓN MATERIALES INTERACTIVA
+   NUEVOS ESTILOS: E-COMMERCE (MENÚ Y CATÁLOGO)
    ========================================= */
 .gm-materiales-section {
-    max-width: 1000px;
-    margin: 3rem auto;
+    max-width: 1100px;
+    margin: 4rem auto;
     padding: 0 1rem;
 }
 
-.gm-materiales-section h2 {
-    text-align: center;
-    margin-bottom: 10px;
+.catalogo-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 }
 
-.subtitulo-seccion {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #666;
+/* Menú lateral (Sidebar) */
+.sidebar-filtros {
+    width: 260px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    /* El position sticky hace que el menú te acompañe si bajás en la página */
+    position: sticky; 
+    top: 20px;
 }
 
-.gm-categoria-container h3 {
-    margin: 30px 0 15px;
+.sidebar-filtros h3 {
+    margin-bottom: 15px;
     color: #2c3e50;
     border-bottom: 2px solid #d4af37;
-    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.lista-categorias {
+    list-style: none;
+}
+
+.lista-categorias li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+.lista-categorias li:hover {
+    background-color: #f9f9f9;
+    color: #d4af37;
+}
+
+.lista-categorias li.activo {
+    background-color: #1a1a1a;
+    color: #d4af37;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+/* Columna de tarjetas */
+.contenido-materiales {
+    flex: 1;
 }
 
 /* Tarjeta del Material */
@@ -114,6 +155,8 @@ header h1 span { color: #d4af37; }
     margin-bottom: 25px;
     cursor: pointer; 
     transition: transform 0.3s, box-shadow 0.3s;
+    /* Por defecto se ven todas, el JS las oculta */
+    display: block; 
 }
 
 .gm-material-card:hover {
@@ -121,7 +164,6 @@ header h1 span { color: #d4af37; }
     box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 
-/* Imagen Principal (Banner) */
 .gm-banner-img {
     width: 100%;
     height: 180px; 
@@ -149,7 +191,6 @@ header h1 span { color: #d4af37; }
     transition: transform 0.3s ease;
 }
 
-/* Girar la flecha al abrir */
 .gm-material-card.activo .flecha {
     transform: rotate(180deg);
 }
@@ -160,7 +201,6 @@ header h1 span { color: #d4af37; }
     font-size: 0.95rem;
 }
 
-/* Acordeón (Los colores que se despliegan) */
 .gm-expansion {
     max-height: 0; 
     overflow: hidden;
@@ -169,7 +209,6 @@ header h1 span { color: #d4af37; }
     padding: 0 20px; 
 }
 
-/* Cuando se le hace clic, se abre */
 .gm-material-card.activo .gm-expansion {
     max-height: 500px; 
     padding: 20px; 
@@ -188,13 +227,10 @@ header h1 span { color: #d4af37; }
     gap: 15px;
 }
 
-.color-item {
-    text-align: center;
-}
+.color-item { text-align: center; }
 
 .color-item img {
-    width: 80px;
-    height: 80px;
+    width: 80px; height: 80px;
     border-radius: 50%; 
     object-fit: cover;
     border: 3px solid white;
@@ -202,16 +238,23 @@ header h1 span { color: #d4af37; }
     transition: transform 0.2s;
 }
 
-.color-item:hover img {
-    transform: scale(1.1);
+.color-item:hover img { transform: scale(1.1); }
+.color-item span { display: block; margin-top: 8px; font-size: 0.85rem; color: #333; }
+
+/* Para que en el celu el menú quede arriba y no al costado */
+@media (max-width: 768px) {
+    .catalogo-wrapper {
+        flex-direction: column;
+    }
+    .sidebar-filtros {
+        width: 100%;
+        position: static;
+    }
 }
 
-.color-item span {
-    display: block;
-    margin-top: 8px;
-    font-size: 0.85rem;
-    color: #333;
-}
+/* =========================================
+   FIN NUEVOS ESTILOS
+   ========================================= */
 
 /* Tarjetas de Servicios */
 #servicios {

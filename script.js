@@ -1,4 +1,4 @@
-// Función para el Visualizador de Muebles (La que ya tenías)
+// === VISUALIZADOR DE MUEBLES ===
 function cambiarTela(tipo) {
     const imagenMueble = document.getElementById('mueble-base');
     const linkWA = document.getElementById('whatsapp-link');
@@ -8,24 +8,23 @@ function cambiarTela(tipo) {
 
     const catalogoTelas = {
         'pana-azul': {
-            img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80',
+            img: 'https://picsum.photos/id/1018/800/500', // Reemplazar despues por tus fotos
             nombre: 'Pana Azul'
         },
         'pana-roja': {
-            img: 'https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?auto=format&fit=crop&w=800&q=80',
+            img: 'https://picsum.photos/id/1019/800/500',
             nombre: 'Pana Violeta'
         },
         'ecocuero': {
-            img: 'https://images.unsplash.com/photo-1567016432779-094069958ad5?auto=format&fit=crop&w=800&q=80',
+            img: 'https://picsum.photos/id/1020/800/500',
             nombre: 'Verde Bosque'
         },
         'lino': {
-            img: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=800&q=80',
+            img: 'https://picsum.photos/id/1021/800/500',
             nombre: 'Ocre'
         }
     };
 
-    // Efecto visual de transición
     imagenMueble.style.opacity = 0;
     
     setTimeout(() => {
@@ -39,12 +38,33 @@ function cambiarTela(tipo) {
     }, 300);
 }
 
-// === NUEVA FUNCIÓN: ACORDEÓN DE MATERIALES ===
-// Esta función se activa al hacer clic en una tarjeta de material
+// === ACORDEÓN DE MATERIALES (Abre y cierra la tarjeta) ===
 function toggleMaterial(elementoTarjeta) {
-    // 1. 'elementoTarjeta' es la tarjeta completa a la que se le hizo clic (el <div> con clase gm-material-card)
-    
-    // 2. Le agregamos o quitamos la clase 'activo'. 
-    // CSS se encarga del resto (mostrar la expansión y girar la flecha)
     elementoTarjeta.classList.toggle('activo');
+}
+
+// === NUEVO: FILTRO DEL MENÚ LATERAL ===
+function filtrarCategoria(categoria, elementoClickeado) {
+    // 1. Pintar de negro/dorado el botón que tocamos en el menú
+    const itemsMenu = document.querySelectorAll('.lista-categorias li');
+    itemsMenu.forEach(item => {
+        item.classList.remove('activo'); // Le sacamos el color a todos
+    });
+    elementoClickeado.classList.add('activo'); // Se lo ponemos solo al que tocamos
+
+    // 2. Mostrar/Ocultar las tarjetas
+    const tarjetas = document.querySelectorAll('.gm-material-card');
+    
+    tarjetas.forEach(tarjeta => {
+        // Obtenemos qué categoría es la tarjeta mirando su "data-categoria" en el HTML
+        const categoriaTarjeta = tarjeta.getAttribute('data-categoria');
+
+        // Si elegimos "todas" o si la tarjeta coincide con el menú que tocamos, se muestra
+        if (categoria === 'todas' || categoriaTarjeta === categoria) {
+            tarjeta.style.display = 'block';
+        } else {
+            // Si no coincide, la escondemos
+            tarjeta.style.display = 'none';
+        }
+    });
 }
