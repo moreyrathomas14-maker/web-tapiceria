@@ -1,4 +1,4 @@
-// === VISUALIZADOR DE MUEBLES ===
+// === VISUALIZADOR DE MUEBLES (YA TENÍAS) ===
 function cambiarTela(tipo) {
     const imagenMueble = document.getElementById('mueble-base');
     const linkWA = document.getElementById('whatsapp-link');
@@ -43,8 +43,19 @@ function toggleMaterial(elementoTarjeta) {
     elementoTarjeta.classList.toggle('activo');
 }
 
-// === NUEVO: ACORDEÓN DE SERVICIOS ===
-// Es igual a la de materiales, pero la separamos por si después querés agregarle cosas distintas a los servicios
+// === NUEVA FUNCIÓN: ACTUALIZAR IMAGEN PRINCIPAL AL TOCAR COLOR ===
+function actualizarImagenPrincipal(imagenChica, nuevaRuta) {
+    // 1. Encontrar la tarjeta de material (el contenedor principal)
+    const tarjeta = imagenChica.closest('.gm-material-card');
+    
+    // 2. Encontrar la imagen principal (el banner) de esa tarjeta
+    const imagenPrincipal = tarjeta.querySelector('.gm-banner-img');
+    
+    // 3. Actualizar la ruta de la imagen principal
+    imagenPrincipal.src = nuevaRuta;
+}
+
+// === ACORDEÓN DE SERVICIOS ===
 function toggleServicio(elementoServicio) {
     elementoServicio.classList.toggle('activo');
 }

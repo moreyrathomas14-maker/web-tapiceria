@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa; /* Un fondito un poco más claro y moderno */
+    background-color: #f8f9fa;
     color: #333;
     line-height: 1.6;
 }
@@ -65,10 +65,10 @@ header h1 span { color: #d4af37; }
 .btn-tela:hover { opacity: 0.8; }
 
 /* =========================================
-   DISEÑO E-COMMERCE (GRILLA ESTILO KING OF THE KONGO)
+   DISEÑO E-COMMERCE MATERIALES (MODIFICADO)
    ========================================= */
 .gm-materiales-section {
-    max-width: 1200px; /* Un poco más ancho para que entren bien las tarjetas */
+    max-width: 1200px;
     margin: 4rem auto;
     padding: 0 1rem;
 }
@@ -84,47 +84,24 @@ header h1 span { color: #d4af37; }
     width: 220px;
     background: transparent;
     padding-right: 20px;
-    border-right: 1px solid #eaeaea; /* Línea divisoria suave */
+    border-right: 1px solid #eaeaea;
     position: sticky; 
     top: 20px;
 }
 
-.sidebar-filtros h3 {
-    margin-bottom: 20px;
-    color: #1a1a1a;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
+.sidebar-filtros h3 { margin-bottom: 20px; color: #1a1a1a; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .lista-categorias { list-style: none; }
-.lista-categorias li {
-    padding: 10px 0;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 0.95rem;
-    color: #555;
-}
+.lista-categorias li { padding: 10px 0; cursor: pointer; transition: all 0.2s ease; font-size: 0.95rem; color: #555; }
+.lista-categorias li:hover { color: #1a1a1a; text-decoration: underline; }
+.lista-categorias li.activo { color: #1a1a1a; font-weight: bold; text-decoration: underline; }
 
-.lista-categorias li:hover {
-    color: #1a1a1a;
-    text-decoration: underline;
-}
-
-.lista-categorias li.activo {
-    color: #1a1a1a;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-/* Columna de tarjetas (AHORA ES UNA GRILLA) */
+/* Columna de tarjetas (GRILLA) */
 .contenido-materiales {
     flex: 1;
     display: grid;
-    /* Auto-fill crea columnas automáticamente. minmax(280px) es el ancho de la tarjeta */
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 30px;
-    align-items: start; /* Evita que las tarjetas se estiren si otra se abre */
+    align-items: start;
 }
 
 /* Tarjeta de cada material */
@@ -139,11 +116,12 @@ header h1 span { color: #d4af37; }
 }
 .gm-material-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 
-/* Imagen de la tarjeta (Más alta y cuadrada como e-commerce) */
+/* Imagen principal (NUEVAS REGLAS DE RECORTE) */
 .gm-banner-img { 
     width: 100%; 
-    height: 240px; 
-    object-fit: cover; 
+    height: 320px; /* Un poco más alta para dar efecto e-commerce */
+    object-fit: cover; /* Recorte automático */
+    object-position: left; /* Recortar desde la izquierda para mostrar solo tela */
     display: block; 
     border-bottom: 2px solid #d4af37; 
 }
@@ -157,10 +135,20 @@ header h1 span { color: #d4af37; }
 .gm-expansion { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fafafa; padding: 0 15px; }
 .gm-material-card.activo .gm-expansion { max-height: 400px; padding: 15px; border-top: 1px solid #eee; }
 
-/* Grilla de los circulitos de colores ajustada para tarjetas más angostas */
+/* Grilla de colores (MODIFICADA) */
 .gm-colores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(55px, 1fr)); gap: 10px; }
 .color-item { text-align: center; }
-.color-item img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s; }
+.color-item img { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: left; /* Recorte desde la izquierda */
+    border: 2px solid white; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: transform 0.2s; 
+    cursor: pointer; /* Indicar clic */
+}
 .color-item:hover img { transform: scale(1.1); }
 .color-item span { display: block; margin-top: 6px; font-size: 0.75rem; color: #555; }
 
