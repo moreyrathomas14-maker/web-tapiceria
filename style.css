@@ -1,64 +1,15 @@
 /* Configuración General */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Encabezado */
-header {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    border-bottom: 4px solid #d4af37;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; }
+header { background-color: #1a1a1a; color: white; padding: 2rem; text-align: center; border-bottom: 4px solid #d4af37; }
 header h1 span { color: #d4af37; }
 
 /* Visualizador */
-#visualizador {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.texto-intro {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contenedor-interactivo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.pantalla-mueble {
-    flex: 1;
-    min-width: 300px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.pantalla-mueble img {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s;
-}
-
+#visualizador { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+.texto-intro { text-align: center; margin-bottom: 20px; }
+.contenedor-interactivo { display: flex; flex-wrap: wrap; gap: 2rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.pantalla-mueble { flex: 1; min-width: 300px; position: relative; overflow: hidden; border-radius: 8px; }
+.pantalla-mueble img { width: 100%; display: block; transition: transform 0.5s; }
 .selector-telas { flex: 1; min-width: 250px; }
 .botones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 1rem; }
 .btn-tela { padding: 1rem; border: none; color: white; font-weight: bold; cursor: pointer; border-radius: 5px; transition: opacity 0.3s; }
@@ -67,28 +18,11 @@ header h1 span { color: #d4af37; }
 /* =========================================
    DISEÑO E-COMMERCE MATERIALES
    ========================================= */
-.gm-materiales-section {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 1rem;
-}
-
-.catalogo-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
+.gm-materiales-section { max-width: 1200px; margin: 4rem auto; padding: 0 1rem; }
+.catalogo-wrapper { display: flex; gap: 40px; align-items: flex-start; }
 
 /* Menú lateral minimalista */
-.sidebar-filtros {
-    width: 220px;
-    background: transparent;
-    padding-right: 20px;
-    border-right: 1px solid #eaeaea;
-    position: sticky; 
-    top: 20px;
-}
-
+.sidebar-filtros { width: 220px; background: transparent; padding-right: 20px; border-right: 1px solid #eaeaea; position: sticky; top: 20px; }
 .sidebar-filtros h3 { margin-bottom: 20px; color: #1a1a1a; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .lista-categorias { list-style: none; }
 .lista-categorias li { padding: 10px 0; cursor: pointer; transition: all 0.2s ease; font-size: 0.95rem; color: #555; }
@@ -96,36 +30,14 @@ header h1 span { color: #d4af37; }
 .lista-categorias li.activo { color: #1a1a1a; font-weight: bold; text-decoration: underline; }
 
 /* Columna de tarjetas (GRILLA) */
-.contenido-materiales {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 30px;
-    align-items: start;
-}
+.contenido-materiales { flex: 1; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 30px; align-items: start; }
 
 /* Tarjeta de cada material */
-.gm-material-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    cursor: pointer; 
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: block; 
-}
+.gm-material-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; display: block; }
 .gm-material-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 
 /* Imagen principal (NUEVAS REGLAS DE RECORTE) */
-.gm-banner-img { 
-    width: 100%; 
-    height: 320px; 
-    object-fit: cover; 
-    object-position: left; 
-    display: block; 
-    border-bottom: 2px solid #d4af37; 
-}
-
+.gm-banner-img { width: 100%; height: 320px; object-fit: cover; object-position: left; display: block; border-bottom: 2px solid #d4af37; }
 .gm-card-header { padding: 15px; position: relative; }
 .gm-card-header h4 { margin: 0 0 8px 0; color: #1a1a1a; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; }
 .gm-card-header h4 .flecha { color: #d4af37; transition: transform 0.3s ease; font-size: 0.9rem;}
@@ -138,17 +50,7 @@ header h1 span { color: #d4af37; }
 /* Grilla de colores */
 .gm-colores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(55px, 1fr)); gap: 10px; }
 .color-item { text-align: center; }
-.color-item img { 
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    object-position: left; 
-    border: 2px solid white; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-    transition: transform 0.2s; 
-    cursor: pointer; 
-}
+.color-item img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; object-position: left; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s; cursor: pointer; }
 .color-item:hover img { transform: scale(1.1); }
 .color-item span { display: block; margin-top: 6px; font-size: 0.75rem; color: #555; }
 
@@ -163,7 +65,6 @@ header h1 span { color: #d4af37; }
    SERVICIOS EXTENSIBLES (ACORDEÓN)
    ========================================= */
 .gm-servicios-section { max-width: 1000px; margin: 4rem auto; padding: 0 1rem; }
-
 .gm-servicio-card { background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); cursor: pointer; overflow: hidden; border: 1px solid #eaeaea; }
 .gm-servicio-header { padding: 20px 25px; background-color: #fff; transition: background-color 0.3s; }
 .gm-servicio-card:hover .gm-servicio-header { background-color: #fcfcfc; }
