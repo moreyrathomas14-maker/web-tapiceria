@@ -8,19 +8,19 @@ function cambiarTela(tipo) {
 
     const catalogoTelas = {
         'pana-azul': {
-            img: 'https://picsum.photos/id/1018/800/500',
+            img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80',
             nombre: 'Pana Azul'
         },
         'pana-roja': {
-            img: 'https://picsum.photos/id/1019/800/500',
+            img: 'https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?auto=format&fit=crop&w=800&q=80',
             nombre: 'Pana Violeta'
         },
         'ecocuero': {
-            img: 'https://picsum.photos/id/1020/800/500',
+            img: 'https://images.unsplash.com/photo-1567016432779-094069958ad5?auto=format&fit=crop&w=800&q=80',
             nombre: 'Verde Bosque'
         },
         'lino': {
-            img: 'https://picsum.photos/id/1021/800/500',
+            img: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=800&q=80',
             nombre: 'Ocre'
         }
     };
@@ -45,13 +45,8 @@ function toggleMaterial(elementoTarjeta) {
 
 // === NUEVA FUNCIÓN: ACTUALIZAR IMAGEN PRINCIPAL AL TOCAR COLOR ===
 function actualizarImagenPrincipal(imagenChica, nuevaRuta) {
-    // 1. Encontrar la tarjeta de material (el contenedor principal)
     const tarjeta = imagenChica.closest('.gm-material-card');
-    
-    // 2. Encontrar la imagen principal (el banner) de esa tarjeta
     const imagenPrincipal = tarjeta.querySelector('.gm-banner-img');
-    
-    // 3. Actualizar la ruta de la imagen principal
     imagenPrincipal.src = nuevaRuta;
 }
 

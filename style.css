@@ -65,7 +65,7 @@ header h1 span { color: #d4af37; }
 .btn-tela:hover { opacity: 0.8; }
 
 /* =========================================
-   DISEÑO E-COMMERCE MATERIALES (MODIFICADO)
+   DISEÑO E-COMMERCE MATERIALES
    ========================================= */
 .gm-materiales-section {
     max-width: 1200px;
@@ -119,9 +119,9 @@ header h1 span { color: #d4af37; }
 /* Imagen principal (NUEVAS REGLAS DE RECORTE) */
 .gm-banner-img { 
     width: 100%; 
-    height: 320px; /* Un poco más alta para dar efecto e-commerce */
-    object-fit: cover; /* Recorte automático */
-    object-position: left; /* Recortar desde la izquierda para mostrar solo tela */
+    height: 320px; 
+    object-fit: cover; 
+    object-position: left; 
     display: block; 
     border-bottom: 2px solid #d4af37; 
 }
@@ -135,7 +135,7 @@ header h1 span { color: #d4af37; }
 .gm-expansion { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fafafa; padding: 0 15px; }
 .gm-material-card.activo .gm-expansion { max-height: 400px; padding: 15px; border-top: 1px solid #eee; }
 
-/* Grilla de colores (MODIFICADA) */
+/* Grilla de colores */
 .gm-colores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(55px, 1fr)); gap: 10px; }
 .color-item { text-align: center; }
 .color-item img { 
@@ -143,11 +143,11 @@ header h1 span { color: #d4af37; }
     height: 50px; 
     border-radius: 50%; 
     object-fit: cover; 
-    object-position: left; /* Recorte desde la izquierda */
+    object-position: left; 
     border: 2px solid white; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
     transition: transform 0.2s; 
-    cursor: pointer; /* Indicar clic */
+    cursor: pointer; 
 }
 .color-item:hover img { transform: scale(1.1); }
 .color-item span { display: block; margin-top: 6px; font-size: 0.75rem; color: #555; }
