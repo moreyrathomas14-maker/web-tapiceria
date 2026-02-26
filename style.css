@@ -84,7 +84,7 @@ header h1 span { color: #d4af37; }
 .btn-tela:hover { opacity: 0.8; }
 
 /* =========================================
-   NUEVOS ESTILOS: E-COMMERCE (MENÚ Y CATÁLOGO)
+   ESTILOS: E-COMMERCE MATERIALES
    ========================================= */
 .gm-materiales-section {
     max-width: 1100px;
@@ -98,14 +98,12 @@ header h1 span { color: #d4af37; }
     align-items: flex-start;
 }
 
-/* Menú lateral (Sidebar) */
 .sidebar-filtros {
     width: 260px;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    /* El position sticky hace que el menú te acompañe si bajás en la página */
     position: sticky; 
     top: 20px;
 }
@@ -117,10 +115,7 @@ header h1 span { color: #d4af37; }
     padding-bottom: 10px;
 }
 
-.lista-categorias {
-    list-style: none;
-}
-
+.lista-categorias { list-style: none; }
 .lista-categorias li {
     padding: 12px 15px;
     border-bottom: 1px solid #eee;
@@ -128,25 +123,11 @@ header h1 span { color: #d4af37; }
     transition: all 0.2s ease;
     border-radius: 5px;
 }
+.lista-categorias li:hover { background-color: #f9f9f9; color: #d4af37; }
+.lista-categorias li.activo { background-color: #1a1a1a; color: #d4af37; font-weight: bold; border-bottom: none; }
 
-.lista-categorias li:hover {
-    background-color: #f9f9f9;
-    color: #d4af37;
-}
+.contenido-materiales { flex: 1; }
 
-.lista-categorias li.activo {
-    background-color: #1a1a1a;
-    color: #d4af37;
-    font-weight: bold;
-    border-bottom: none;
-}
-
-/* Columna de tarjetas */
-.contenido-materiales {
-    flex: 1;
-}
-
-/* Tarjeta del Material */
 .gm-material-card {
     background: white;
     border-radius: 12px;
@@ -155,148 +136,112 @@ header h1 span { color: #d4af37; }
     margin-bottom: 25px;
     cursor: pointer; 
     transition: transform 0.3s, box-shadow 0.3s;
-    /* Por defecto se ven todas, el JS las oculta */
     display: block; 
 }
+.gm-material-card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.12); }
 
-.gm-material-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-}
+.gm-banner-img { width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 3px solid #d4af37; }
+.gm-card-header { padding: 20px; position: relative; }
+.gm-card-header h4 { margin: 0 0 10px 0; color: #1a1a1a; font-size: 1.2rem; display: flex; justify-content: space-between; align-items: center; }
+.gm-card-header h4 .flecha { color: #d4af37; transition: transform 0.3s ease; }
+.gm-material-card.activo .flecha { transform: rotate(180deg); }
+.gm-card-header p { margin: 0; color: #555; font-size: 0.95rem; }
 
-.gm-banner-img {
-    width: 100%;
-    height: 180px; 
-    object-fit: cover; 
-    display: block;
-    border-bottom: 3px solid #d4af37;
-}
+.gm-expansion { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #f9f9f9; padding: 0 20px; }
+.gm-material-card.activo .gm-expansion { max-height: 500px; padding: 20px; border-top: 1px solid #eee; }
 
-.gm-card-header {
-    padding: 20px;
-    position: relative;
-}
-
-.gm-card-header h4 {
-    margin: 0 0 10px 0;
-    color: #1a1a1a;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.gm-card-header h4 .flecha {
-    color: #d4af37;
-    transition: transform 0.3s ease;
-}
-
-.gm-material-card.activo .flecha {
-    transform: rotate(180deg);
-}
-
-.gm-card-header p {
-    margin: 0;
-    color: #555;
-    font-size: 0.95rem;
-}
-
-.gm-expansion {
-    max-height: 0; 
-    overflow: hidden;
-    transition: max-height 0.4s ease-out; 
-    background-color: #f9f9f9;
-    padding: 0 20px; 
-}
-
-.gm-material-card.activo .gm-expansion {
-    max-height: 500px; 
-    padding: 20px; 
-    border-top: 1px solid #eee;
-}
-
-.gm-expansion h5 {
-    margin: 0 0 15px 0;
-    color: #666;
-    font-weight: 600;
-}
-
-.gm-colores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-    gap: 15px;
-}
-
+.gm-colores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px; }
 .color-item { text-align: center; }
-
-.color-item img {
-    width: 80px; height: 80px;
-    border-radius: 50%; 
-    object-fit: cover;
-    border: 3px solid white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-
+.color-item img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s; }
 .color-item:hover img { transform: scale(1.1); }
 .color-item span { display: block; margin-top: 8px; font-size: 0.85rem; color: #333; }
 
-/* Para que en el celu el menú quede arriba y no al costado */
 @media (max-width: 768px) {
-    .catalogo-wrapper {
-        flex-direction: column;
-    }
-    .sidebar-filtros {
-        width: 100%;
-        position: static;
-    }
+    .catalogo-wrapper { flex-direction: column; }
+    .sidebar-filtros { width: 100%; position: static; }
 }
 
 /* =========================================
-   FIN NUEVOS ESTILOS
+   NUEVOS ESTILOS: SERVICIOS EXTENSIBLES (ACORDEÓN)
    ========================================= */
-
-/* Tarjetas de Servicios */
-#servicios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem 1rem;
+.gm-servicios-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 1rem;
 }
 
-.categoria-principal {
+.gm-servicio-card {
     background: white;
-    width: 100%;
-    max-width: 900px;
-    margin-bottom: 40px;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
 }
 
-.categoria-principal h3 {
+.gm-servicio-header {
+    padding: 20px 25px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.gm-servicio-card:hover .gm-servicio-header {
+    background-color: #fcfcfc;
+}
+
+.gm-servicio-header h3 {
     color: #2c3e50;
-    border-bottom: 2px solid #e74c3c;
-    display: inline-block;
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.gm-servicio-header p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.flecha-servicio {
+    color: #e74c3c; /* Un rojo para que destaque distinto a las telas */
+    transition: transform 0.3s ease;
+}
+
+.gm-servicio-card.activo .flecha-servicio {
+    transform: rotate(180deg);
+}
+
+.gm-servicio-expansion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #fafafa;
+}
+
+.gm-servicio-card.activo .gm-servicio-expansion {
+    max-height: 1500px; /* Un valor alto para que entren todas las fotos */
+    border-top: 1px solid #eee;
+    padding: 25px;
 }
 
 .galeria-servicios {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    justify-content: center;
 }
 
 .item-servicio {
-    flex: 1 1 250px;
-    max-width: 300px;
+    background: white;
     text-align: center;
     border: 1px solid #eee;
     border-radius: 8px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
 }
 
 .item-servicio:hover {
@@ -306,8 +251,15 @@ header h1 span { color: #d4af37; }
 
 .item-servicio img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.item-servicio h4 {
+    color: #333;
+    font-size: 1rem;
+    padding: 0 10px;
 }
 
 /* Estilos del Mapa */

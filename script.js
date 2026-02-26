@@ -8,7 +8,7 @@ function cambiarTela(tipo) {
 
     const catalogoTelas = {
         'pana-azul': {
-            img: 'https://picsum.photos/id/1018/800/500', // Reemplazar despues por tus fotos
+            img: 'https://picsum.photos/id/1018/800/500',
             nombre: 'Pana Azul'
         },
         'pana-roja': {
@@ -38,32 +38,33 @@ function cambiarTela(tipo) {
     }, 300);
 }
 
-// === ACORDEÓN DE MATERIALES (Abre y cierra la tarjeta) ===
+// === ACORDEÓN DE MATERIALES ===
 function toggleMaterial(elementoTarjeta) {
     elementoTarjeta.classList.toggle('activo');
 }
 
-// === NUEVO: FILTRO DEL MENÚ LATERAL ===
+// === NUEVO: ACORDEÓN DE SERVICIOS ===
+// Es igual a la de materiales, pero la separamos por si después querés agregarle cosas distintas a los servicios
+function toggleServicio(elementoServicio) {
+    elementoServicio.classList.toggle('activo');
+}
+
+// === FILTRO DEL MENÚ LATERAL ===
 function filtrarCategoria(categoria, elementoClickeado) {
-    // 1. Pintar de negro/dorado el botón que tocamos en el menú
     const itemsMenu = document.querySelectorAll('.lista-categorias li');
     itemsMenu.forEach(item => {
-        item.classList.remove('activo'); // Le sacamos el color a todos
+        item.classList.remove('activo');
     });
-    elementoClickeado.classList.add('activo'); // Se lo ponemos solo al que tocamos
+    elementoClickeado.classList.add('activo');
 
-    // 2. Mostrar/Ocultar las tarjetas
     const tarjetas = document.querySelectorAll('.gm-material-card');
     
     tarjetas.forEach(tarjeta => {
-        // Obtenemos qué categoría es la tarjeta mirando su "data-categoria" en el HTML
         const categoriaTarjeta = tarjeta.getAttribute('data-categoria');
 
-        // Si elegimos "todas" o si la tarjeta coincide con el menú que tocamos, se muestra
         if (categoria === 'todas' || categoriaTarjeta === categoria) {
             tarjeta.style.display = 'block';
         } else {
-            // Si no coincide, la escondemos
             tarjeta.style.display = 'none';
         }
     });
